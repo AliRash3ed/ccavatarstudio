@@ -28,7 +28,9 @@
 </p>
 
 <p align="center">
+  <a href="https://alirash3ed.github.io/ccavatarstudio/"><img alt="Live Web Studio Demo" src="https://img.shields.io/badge/Live%20Web%20Demo-Online-10B981?style=for-the-badge&logo=googlechrome&logoColor=white" height="38"></a>
   <a href="https://github.com/AliRash3ed/ccavatarstudio"><img alt="Star ccavatarstudio on GitHub" src="https://img.shields.io/badge/Star%20on%20GitHub-4F46E5?style=for-the-badge&logo=github&logoColor=white" height="38"></a>
+  <a href="https://github.com/AliRash3ed/ccavatarstudio/releases/tag/v1.0.0"><img alt="Download Release v1.0.0" src="https://img.shields.io/badge/Release-v1.0.0-0EA5E9?style=for-the-badge&logo=github&logoColor=white" height="38"></a>
 </p>
 
 <p align="center">
@@ -164,6 +166,10 @@ ccavatarstudio/
 ---
 
 ## Quick Start
+
+### 0. Try Online (Instant Preview)
+Test the character designer, timeline, and presenter animations directly in your browser:  
+👉 **[https://alirash3ed.github.io/ccavatarstudio/](https://alirash3ed.github.io/ccavatarstudio/)**
 
 ### 1. Prerequisites
 - **Node.js**: v20 or newer installed
