@@ -1,18 +1,12 @@
 <p align="center">
-  <svg width="96" height="96" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="48" height="48" rx="14" fill="#4F46E5"/>
-    <circle cx="24" cy="22" r="10" stroke="#FFFFFF" stroke-width="2.2" fill="#4338CA"/>
-    <path d="M14 20C14 15 18 12 24 12C30 12 34 15 34 20L38 21.5C38.5 21.7 38.2 22.5 37.7 22.5L34 22C33.8 19 31 17 24 17C17 17 14.2 19 14 22L10.3 22.5C9.8 22.5 9.5 21.7 10 21.5L14 20Z" fill="#FBBF24"/>
-    <path d="M13 22C11.5 22 11 23 11 24.5C11 26 12 27 13.5 27" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-    <path d="M35 22C36.5 22 37 23 37 24.5C37 26 36 27 34.5 27" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-    <path d="M11 20C9.5 20 8.5 21 8.5 23V26C8.5 28 9.5 29 11 29" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M37 20C38.5 20 39.5 21 39.5 23V26C39.5 28 38.5 29 37 29" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M11 20C11 12 16 7 24 7C32 7 37 12 37 20" stroke="#38BDF8" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-    <circle cx="20.5" cy="22" r="1.3" fill="#FFFFFF"/>
-    <circle cx="27.5" cy="22" r="1.3" fill="#FFFFFF"/>
-    <path d="M21 26.5C22 28 26 28 27 26.5" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-    <path d="M14 41C14 34.5 18 31 24 31C30 31 34 34.5 34 41" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" fill="none"/>
-  </svg>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/ccavatarstudio-banner-dark.svg">
+    <img alt="ccavatarstudio — Cartoon AI Avatar &amp; Voiceover Video Studio" src="docs/assets/ccavatarstudio-banner.svg" width="560">
+  </picture>
+</p>
+
+<p align="center">
+  <img src="docs/assets/ccavatarstudio-logo.svg" width="128" height="128" alt="ccavatarstudio logo mark">
 </p>
 
 <h1 align="center">ccavatarstudio</h1>
