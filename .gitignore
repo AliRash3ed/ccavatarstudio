@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production Build
+dist/
+build/
+coverage/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Temporary Media & Render Cache
+.temp_media/
+exports/
+*.wav
+*.mp3
+*.mp4
+*.webm
+test_audio.wav
+test_rhubarb.json
+projects.json
+
+# Tool Binaries (Auto-installed by `npm run setup`)
+tools/rhubarb/
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+*.log
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Agent & Workspace Cache
+.agents/
+.aistudio/

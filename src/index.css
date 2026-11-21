@@ -1,0 +1,409 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
+  }
+
+  html.dark body {
+    background-color: #090D16;
+    color: #F8FAFC;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+}
+
+/* ==========================================================================
+   QUIET CRAFT DESIGN SYSTEM (Unslop & Modern Web Guidance Compliant)
+   Slate neutral ramps, hairline borders, soft elevation, single Indigo accent.
+   ========================================================================== */
+.nb-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+  border-radius: 12px;
+}
+
+.nb-card-muted {
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.03);
+  border-radius: 12px;
+}
+
+.nb-box {
+  background-color: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+}
+
+.nb-btn {
+  border: 1px solid #CBD5E1;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+}
+.nb-btn:hover:not(:disabled) {
+  background-color: #F1F5F9;
+  border-color: #94A3B8;
+}
+.nb-btn:active:not(:disabled) {
+  background-color: #E2E8F0;
+  box-shadow: none;
+}
+
+html.dark .nb-card {
+  background-color: #0F172A;
+  border-color: #1E293B;
+  color: #F8FAFC;
+}
+
+html.dark .nb-card-muted {
+  background-color: #0B0F19;
+  border-color: #1E293B;
+  color: #F8FAFC;
+}
+
+html.dark .nb-box {
+  background-color: #0F172A;
+  border-color: #1E293B;
+}
+
+html.dark .nb-btn {
+  background-color: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+html.dark .nb-btn:hover:not(:disabled) {
+  background-color: #334155;
+  border-color: #475569;
+}
+
+.nb-btn-primary {
+  background-color: #4F46E5 !important;
+  color: #FFFFFF !important;
+  border-color: #4338CA !important;
+  box-shadow: 0 1px 2px 0 rgba(79, 70, 229, 0.3) !important;
+}
+.nb-btn-primary:hover:not(:disabled) {
+  background-color: #4338CA !important;
+}
+
+.nb-btn-mint {
+  background-color: #F8FAFC;
+  color: #0F172A;
+  border-color: #CBD5E1;
+}
+.nb-btn-mint:hover:not(:disabled) {
+  background-color: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.nb-btn-sky {
+  background-color: #F0F9FF;
+  color: #0369A1;
+  border-color: #BAE6FD;
+}
+
+.nb-btn-danger {
+  background-color: #EF4444;
+  color: #FFFFFF;
+  border-color: #DC2626;
+}
+.nb-btn-danger:hover:not(:disabled) {
+  background-color: #DC2626;
+}
+
+.nb-input {
+  background-color: #FFFFFF;
+  color: #0F172A;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.nb-input:focus {
+  border-color: #6366F1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.nb-input:focus-visible {
+  outline: 2px solid #6366F1;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   NATIVE <dialog> MODALS (MWG dialog & light-dismiss guide)
+   ========================================================================== */
+dialog.nb-dialog,
+dialog:modal {
+  margin: auto;
+  overscroll-behavior: contain;
+}
+dialog::backdrop {
+  overflow: hidden;
+  overscroll-behavior: contain;
+  background-color: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* ==========================================================================
+   KEYBOARD FOCUS RING — system-wide (MWG accessibility guide)
+   ========================================================================== */
+.nb-btn:focus-visible,
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role='tab']:focus-visible {
+  outline: 2px solid #6366F1;
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   COMMERCIAL-GRADE VECTOR STAGE
+   ========================================================================== */
+.char-stage {
+  width: 240px;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  user-select: none;
+  flex-shrink: 0;
+  border: 1px solid #E2E8F0;
+  transition: height 0.2s cubic-bezier(0.22, 1, 0.36, 1), transform 0.2s ease;
+}
+
+.char-stage.full-body-stage {
+  height: 380px;
+}
+
+/* Subtle Top-Left Key Light Radial Ambient Glow on Tile */
+.char-stage::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 22% 18%, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0) 55%, rgba(0,0,0,0.08) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.char-stage.clean-canvas-avatar {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+.char-stage.clean-canvas-avatar::before {
+  display: none !important;
+}
+
+/* 24px Spec Grid Overlay */
+.char-stage.show-grid::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.16) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.16) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 90;
+}
+
+/* Wireframe Debug Mode */
+.char-stage.wireframe-mode svg path,
+.char-stage.wireframe-mode svg circle,
+.char-stage.wireframe-mode svg rect,
+.char-stage.wireframe-mode svg ellipse,
+.char-stage.wireframe-mode svg g {
+  stroke: rgba(15, 23, 42, 0.65) !important;
+  stroke-width: 1px !important;
+  stroke-dasharray: 3 2;
+}
+
+/* Flat Shading Toggle */
+.char-stage.flat-shading-mode .shade-layer {
+  opacity: 0 !important;
+}
+
+/* Exploded Puppet Rig View */
+.char-stage.exploded-rig-mode .svg-head-group {
+  transform: translateY(-16px) rotate(var(--local-tilt, var(--head-tilt, 0deg))) !important;
+}
+.char-stage.exploded-rig-mode .svg-neck-group {
+  transform: translateY(-6px);
+}
+.char-stage.exploded-rig-mode .svg-arm-left {
+  transform: translate(-14px, 4px);
+}
+.char-stage.exploded-rig-mode .svg-arm-right {
+  transform: translate(14px, 4px);
+}
+.char-stage.exploded-rig-mode .svg-legs-group {
+  transform: translateY(12px);
+}
+
+/* Turnaround Angles */
+.char-stage.turn-35 .svg-face-features {
+  transform: translateX(-10px);
+}
+.char-stage.turn-90 .svg-face-features {
+  transform: translateX(-22px) scaleX(0.76);
+}
+.char-stage.turn-180 .svg-face-features,
+.char-stage.turn-180 .svg-front-accessory {
+  opacity: 0 !important;
+}
+.char-stage.turn-180 .svg-back-hair-cover {
+  opacity: 1 !important;
+}
+
+.svg-head-group {
+  transform-origin: 120px 146px;
+  transition: transform 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.svg-legs-group, .svg-neck-group {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.svg-arm-left, .svg-arm-right {
+  transition: none !important;
+}
+.char-stage.exploded-rig-mode .svg-arm-left,
+.char-stage.exploded-rig-mode .svg-arm-right {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+.hand-group-l, .hand-group-r {
+  transition: none !important;
+}
+.char-stage.instant-pose,
+.char-stage.instant-pose *,
+.char-stage.instant-pose .svg-head-group,
+.char-stage.instant-pose .svg-arm-left,
+.char-stage.instant-pose .svg-arm-right,
+.char-stage.instant-pose .svg-legs-group,
+.char-stage.instant-pose .svg-neck-group,
+.char-stage.instant-pose .hand-group-l,
+.char-stage.instant-pose .hand-group-r {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Mini stage wrapper for sprite matrices */
+.mini-stage-wrap {
+  width: 84px;
+  height: 84px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  flex-shrink: 0;
+  border: 2px solid #111111;
+}
+.mini-stage-wrap .char-stage {
+  height: 240px !important;
+  transform: scale(0.35);
+  transform-origin: top left;
+  border-radius: 0;
+  border: none;
+}
+
+/* Tabular figures for counters and timers */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Keyframes for interactive micro-animations (disabled in deterministicPose mode) */
+@keyframes headNodYes {
+  0%, 100% { transform: rotate(var(--local-tilt, 0deg)) translateY(0px); }
+  25% { transform: rotate(var(--local-tilt, 0deg)) translateY(8px) scaleY(0.97); }
+  50% { transform: rotate(var(--local-tilt, 0deg)) translateY(-2px); }
+  75% { transform: rotate(var(--local-tilt, 0deg)) translateY(6px) scaleY(0.98); }
+}
+
+@keyframes headShakeNo {
+  0%, 100% { transform: translateX(0px); }
+  25% { transform: translateX(-9px); }
+  75% { transform: translateX(9px); }
+}
+
+@keyframes gentleHandWave {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(12deg); }
+}
+
+.nodding-yes .svg-head-group {
+  animation: headNodYes 0.9s ease-in-out infinite !important;
+}
+
+.shaking-no .svg-face-features {
+  animation: headShakeNo 0.65s ease-in-out infinite !important;
+}
+
+.waving-hand-wrist {
+  transform-origin: 0px 0px;
+  animation: gentleHandWave 1.4s ease-in-out infinite;
+}
+
+/* Stage Background Presets (Dotted & Solid Studio Surfaces) */
+.stage-bg-card { background: var(--active-card-bg, #52B467); }
+.stage-bg-original-white {
+  background-color: #F7F7F5;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.18) 1.25px, transparent 1.25px);
+  background-size: 16px 16px;
+}
+.stage-bg-midnight {
+  background-color: #131B2E;
+  background-image: radial-gradient(rgba(148, 163, 184, 0.22) 1.2px, transparent 1.2px);
+  background-size: 16px 16px;
+}
+.stage-bg-grid {
+  background-color: #F8FAFC;
+  background-image: linear-gradient(to right, rgba(148,163,184,0.25) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(148,163,184,0.25) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+.stage-bg-cream {
+  background-color: #EFECE6;
+  background-image: radial-gradient(rgba(120, 113, 108, 0.22) 1.25px, transparent 1.25px);
+  background-size: 16px 16px;
+}
+.stage-bg-sky {
+  background-color: #DCE5EE;
+  background-image: radial-gradient(rgba(71, 85, 105, 0.20) 1.25px, transparent 1.25px);
+  background-size: 16px 16px;
+}
+.stage-bg-white { background: #FFFFFF; }
+.stage-bg-black { background: #0B0B0E; }
+.stage-bg-chroma { background: #00B140; }
+.stage-bg-checker {
+  background-color: #E2E8F0;
+  background-image: linear-gradient(45deg, #CBD5E1 25%, transparent 25%),
+                    linear-gradient(-45deg, #CBD5E1 25%, transparent 25%),
+                    linear-gradient(45deg, transparent 75%, #CBD5E1 75%),
+                    linear-gradient(-45deg, transparent 75%, #CBD5E1 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}

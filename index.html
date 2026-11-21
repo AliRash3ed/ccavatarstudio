@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ccavatarstudio — Cartoon AI Avatar &amp; Voiceover Studio | Free Offline 1080p MP4</title>
+    <meta name="description" content="ccavatarstudio: Cartoon AI Avatar &amp; Voiceover Studio. The free, offline cartoon alternative to HeyGen. Create talking 2D presenter videos from voiceovers and scripts locally on your PC. 24 vector presenters, 320+ Edge voices, Rhubarb lip-sync, and deterministic 1080p MP4 export." />
+    <meta name="keywords" content="ccavatarstudio, CC Avatar Studio, Cartoon AI Avatar and Voiceover Studio, HeyGen alternative, cartoon avatar video generator, offline 2D presenter, Rhubarb lip sync, Edge neural TTS, local AI video studio, transparent WebM alpha, 1080p MP4 export, talking cartoon character" />
+    <meta name="author" content="ccavatarstudio" />
+    <link rel="canonical" href="https://ccavatarstudio.app/" />
+
+    <!-- Color Scheme & FOUC Prevention Script (Modern Web Guidance Compliant) -->
+    <meta name="color-scheme" content="light dark" />
+    <script>
+      (function() {
+        try {
+          var stored = localStorage.getItem('color-scheme');
+          var isDark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          var meta = document.querySelector('meta[name="color-scheme"]');
+          if (meta && stored) meta.setAttribute('content', stored);
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ccavatarstudio.app/" />
+    <meta property="og:title" content="ccavatarstudio — Cartoon AI Avatar &amp; Voiceover Studio" />
+    <meta property="og:description" content="Generate animated 2D presenter videos from voiceovers or scripts locally on your computer. Zero subscriptions, zero cloud wait times, unlimited 1080p exports." />
+    <meta property="og:site_name" content="ccavatarstudio" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ccavatarstudio — Cartoon AI Avatar &amp; Voiceover Studio" />
+    <meta name="twitter:description" content="The free forever cartoon alternative to HeyGen. Runs 100% locally with acoustic Rhubarb lip-sync and 1080p MP4 rendering." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (JSON-LD) for SEO, AEO & Answer Engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "ccavatarstudio",
+          "operatingSystem": "Windows, macOS, Linux",
+          "applicationCategory": "MultimediaApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "Free forever, offline cartoon alternative to HeyGen. Runs entirely on local PC with acoustic Rhubarb lip-sync, 320+ Edge voices, and deterministic 1080p MP4 rendering.",
+          "featureList": [
+            "100% Free and offline local execution",
+            "Word-gated acoustic Rhubarb lip-sync",
+            "24 articulated pure-vector presenters",
+            "30 expressive 5-finger hand gestures",
+            "320+ Microsoft Edge neural voices across 70+ languages",
+            "Deterministic 1080p MP4 and transparent VP9 WebM exports",
+            "Custom LLM API support (OpenAI, Anthropic Claude, OpenRouter, Gemini)",
+            "Reaction and commentary video overlay layouts"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is Persona Studio completely free?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Persona Studio is 100% free forever with no credit caps, no monthly subscription, and no watermark restrictions. It runs directly on your local computer."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Persona Studio compare to HeyGen and Synthesia?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "While HeyGen and Synthesia charge $29 to $99 per month with strict video minute caps and 10-minute cloud render queues, Persona Studio renders locally in seconds with unlimited 1080p exports and complete data privacy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does Persona Studio require cloud API keys to run?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Core features including Microsoft Edge neural voices, acoustic Rhubarb lip-sync, and FFmpeg video rendering run locally without any API keys. Optional keys for OpenAI, Anthropic, or Gemini can be added for automated script directing."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-indigo-100 selection:text-indigo-900 transition-colors duration-150">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

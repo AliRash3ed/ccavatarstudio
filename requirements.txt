@@ -1,0 +1,5 @@
+# Optional Python dependencies ONLY needed if running standalone CLI scripts (/scripts/*.py)
+# The web studio itself (Edge TTS + FFmpeg MP4 Render + Rhubarb Lip-Sync) runs via Node.js with zero Python packages required.
+edge-tts>=6.1.12
+faster-whisper>=1.0.3
+gradio_client>=1.3.0
